@@ -1,0 +1,97 @@
+# Project: fuzzy_control_system
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = akceleracija/akceleracija_deduction_policy.o akceleracija/akceleracija_rule_base.o domain/composite_domain.o domain/domain.o domain/simple_domain.o fuzzy_set/calculated_fuzzy_set.o fuzzy_set/fuzzy_set.o fuzzy_set/fuzzy_set_decorator.o fuzzy_set/mutable_fuzzy_set.o fuzzy_set/standard_fuzzy_sets.o fuzzy_system/deduction_policies.o fuzzy_system/defuzzifiers.o fuzzy_system/fuzzy_ctrl_system.o fuzzy_system/inputs.o fuzzy_system/rule_builder.o kormilo/kormilo_deduction_policy.o kormilo/kormilo_rule_base.o operations/implications.o operations/modifiers.o operations/operations.o relations/binary_fuzzy_composition.o relations/fuzzy_relation.o main.o rule_sets.o
+LINKOBJ  = akceleracija/akceleracija_deduction_policy.o akceleracija/akceleracija_rule_base.o domain/composite_domain.o domain/domain.o domain/simple_domain.o fuzzy_set/calculated_fuzzy_set.o fuzzy_set/fuzzy_set.o fuzzy_set/fuzzy_set_decorator.o fuzzy_set/mutable_fuzzy_set.o fuzzy_set/standard_fuzzy_sets.o fuzzy_system/deduction_policies.o fuzzy_system/defuzzifiers.o fuzzy_system/fuzzy_ctrl_system.o fuzzy_system/inputs.o fuzzy_system/rule_builder.o kormilo/kormilo_deduction_policy.o kormilo/kormilo_rule_base.o operations/implications.o operations/modifiers.o operations/operations.o relations/binary_fuzzy_composition.o relations/fuzzy_relation.o main.o rule_sets.o
+LIBS     = -L"C:/msys64/mingw64/lib" -L"C:/msys64/mingw64/x86_64-w64-mingw32/lib" -static-libgcc -static-libstdc++ -g3
+INCS     = -I"C:/msys64/mingw64/include" -I"C:/msys64/mingw64/x86_64-w64-mingw32/include" -I"C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+CXXINCS  = -I"C:/msys64/mingw64/include" -I"C:/msys64/mingw64/x86_64-w64-mingw32/include" -I"C:/msys64/mingw64/lib/gcc/x86_64-w64-mingw32/9.2.0/include"
+BIN      = fuzzy_control_system.exe
+CXXFLAGS = $(CXXINCS) -g3 -std=c++17 -Wall
+CFLAGS   = $(INCS) -g3 -std=c++17 -Wall
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+akceleracija/akceleracija_deduction_policy.o: akceleracija/akceleracija_deduction_policy.cpp
+	$(CPP) -c akceleracija/akceleracija_deduction_policy.cpp -o akceleracija/akceleracija_deduction_policy.o $(CXXFLAGS)
+
+akceleracija/akceleracija_rule_base.o: akceleracija/akceleracija_rule_base.cpp
+	$(CPP) -c akceleracija/akceleracija_rule_base.cpp -o akceleracija/akceleracija_rule_base.o $(CXXFLAGS)
+
+domain/composite_domain.o: domain/composite_domain.cpp
+	$(CPP) -c domain/composite_domain.cpp -o domain/composite_domain.o $(CXXFLAGS)
+
+domain/domain.o: domain/domain.cpp
+	$(CPP) -c domain/domain.cpp -o domain/domain.o $(CXXFLAGS)
+
+domain/simple_domain.o: domain/simple_domain.cpp
+	$(CPP) -c domain/simple_domain.cpp -o domain/simple_domain.o $(CXXFLAGS)
+
+fuzzy_set/calculated_fuzzy_set.o: fuzzy_set/calculated_fuzzy_set.cpp
+	$(CPP) -c fuzzy_set/calculated_fuzzy_set.cpp -o fuzzy_set/calculated_fuzzy_set.o $(CXXFLAGS)
+
+fuzzy_set/fuzzy_set.o: fuzzy_set/fuzzy_set.cpp
+	$(CPP) -c fuzzy_set/fuzzy_set.cpp -o fuzzy_set/fuzzy_set.o $(CXXFLAGS)
+
+fuzzy_set/fuzzy_set_decorator.o: fuzzy_set/fuzzy_set_decorator.cpp
+	$(CPP) -c fuzzy_set/fuzzy_set_decorator.cpp -o fuzzy_set/fuzzy_set_decorator.o $(CXXFLAGS)
+
+fuzzy_set/mutable_fuzzy_set.o: fuzzy_set/mutable_fuzzy_set.cpp
+	$(CPP) -c fuzzy_set/mutable_fuzzy_set.cpp -o fuzzy_set/mutable_fuzzy_set.o $(CXXFLAGS)
+
+fuzzy_set/standard_fuzzy_sets.o: fuzzy_set/standard_fuzzy_sets.cpp
+	$(CPP) -c fuzzy_set/standard_fuzzy_sets.cpp -o fuzzy_set/standard_fuzzy_sets.o $(CXXFLAGS)
+
+fuzzy_system/deduction_policies.o: fuzzy_system/deduction_policies.cpp
+	$(CPP) -c fuzzy_system/deduction_policies.cpp -o fuzzy_system/deduction_policies.o $(CXXFLAGS)
+
+fuzzy_system/defuzzifiers.o: fuzzy_system/defuzzifiers.cpp
+	$(CPP) -c fuzzy_system/defuzzifiers.cpp -o fuzzy_system/defuzzifiers.o $(CXXFLAGS)
+
+fuzzy_system/fuzzy_ctrl_system.o: fuzzy_system/fuzzy_ctrl_system.cpp
+	$(CPP) -c fuzzy_system/fuzzy_ctrl_system.cpp -o fuzzy_system/fuzzy_ctrl_system.o $(CXXFLAGS)
+
+fuzzy_system/inputs.o: fuzzy_system/inputs.cpp
+	$(CPP) -c fuzzy_system/inputs.cpp -o fuzzy_system/inputs.o $(CXXFLAGS)
+
+fuzzy_system/rule_builder.o: fuzzy_system/rule_builder.cpp
+	$(CPP) -c fuzzy_system/rule_builder.cpp -o fuzzy_system/rule_builder.o $(CXXFLAGS)
+
+kormilo/kormilo_deduction_policy.o: kormilo/kormilo_deduction_policy.cpp
+	$(CPP) -c kormilo/kormilo_deduction_policy.cpp -o kormilo/kormilo_deduction_policy.o $(CXXFLAGS)
+
+kormilo/kormilo_rule_base.o: kormilo/kormilo_rule_base.cpp
+	$(CPP) -c kormilo/kormilo_rule_base.cpp -o kormilo/kormilo_rule_base.o $(CXXFLAGS)
+
+operations/implications.o: operations/implications.cpp
+	$(CPP) -c operations/implications.cpp -o operations/implications.o $(CXXFLAGS)
+
+operations/modifiers.o: operations/modifiers.cpp
+	$(CPP) -c operations/modifiers.cpp -o operations/modifiers.o $(CXXFLAGS)
+
+operations/operations.o: operations/operations.cpp
+	$(CPP) -c operations/operations.cpp -o operations/operations.o $(CXXFLAGS)
+
+relations/binary_fuzzy_composition.o: relations/binary_fuzzy_composition.cpp
+	$(CPP) -c relations/binary_fuzzy_composition.cpp -o relations/binary_fuzzy_composition.o $(CXXFLAGS)
+
+relations/fuzzy_relation.o: relations/fuzzy_relation.cpp
+	$(CPP) -c relations/fuzzy_relation.cpp -o relations/fuzzy_relation.o $(CXXFLAGS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+rule_sets.o: rule_sets.cpp
+	$(CPP) -c rule_sets.cpp -o rule_sets.o $(CXXFLAGS)
