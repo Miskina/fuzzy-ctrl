@@ -1,0 +1,62 @@
+cmake_minimum_required(VERSION 3.14)
+project(fuzzy-ctrl)
+
+set(CMAKE_CXX_STANDARD 17)
+
+include_directories(.)
+include_directories(akceleracija)
+include_directories(domain)
+include_directories(fuzzy_set)
+include_directories(fuzzy_system)
+include_directories(kormilo)
+include_directories(operations)
+include_directories(relations)
+
+add_executable(fuzzy-ctrl
+        akceleracija/akceleracija_deduction_policy.cpp
+        akceleracija/akceleracija_deduction_policy.h
+        akceleracija/akceleracija_rule_base.cpp
+        akceleracija/akceleracija_rule_base.h
+        domain/composite_domain.cpp
+        domain/composite_domain.h
+        domain/domain.cpp
+        domain/domain.h
+        domain/simple_domain.cpp
+        domain/simple_domain.h
+        fuzzy_set/calculated_fuzzy_set.cpp
+        fuzzy_set/calculated_fuzzy_set.h
+        fuzzy_set/fuzzy_set.cpp
+        fuzzy_set/fuzzy_set.h
+        fuzzy_set/fuzzy_set_decorator.cpp
+        fuzzy_set/fuzzy_set_decorator.h
+        fuzzy_set/mutable_fuzzy_set.cpp
+        fuzzy_set/mutable_fuzzy_set.h
+        fuzzy_set/standard_fuzzy_sets.cpp
+        fuzzy_set/standard_fuzzy_sets.h
+        fuzzy_system/deduction_policies.cpp
+        fuzzy_system/deduction_policies.h
+        fuzzy_system/defuzzifiers.cpp
+        fuzzy_system/defuzzifiers.h
+        fuzzy_system/fuzzy_ctrl_system.cpp
+        fuzzy_system/fuzzy_ctrl_system.h
+        fuzzy_system/inputs.cpp
+        fuzzy_system/inputs.h
+        fuzzy_system/rule_builder.cpp
+        fuzzy_system/rule_builder.h
+        kormilo/kormilo_deduction_policy.cpp
+        kormilo/kormilo_deduction_policy.h
+        kormilo/kormilo_rule_base.cpp
+        kormilo/kormilo_rule_base.h
+        operations/implications.cpp
+        operations/implications.h
+        operations/modifiers.cpp
+        operations/modifiers.h
+        operations/operations.cpp
+        operations/operations.h
+        relations/binary_fuzzy_composition.cpp
+        relations/binary_fuzzy_composition.h
+        relations/fuzzy_relation.cpp
+        relations/fuzzy_relation.h
+        main.cpp
+        rule_sets.cpp
+        rule_sets.h)
